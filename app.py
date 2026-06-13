@@ -45,6 +45,8 @@ class App:
         if amount > source_account["balance"]:
             print("Not enough funds!")
             raise ValueError
+        source_account["balance"] -= amount
+        destination_account["balance"] += amount
         return source_account, destination_account, amount
 
     def get_account(self):
