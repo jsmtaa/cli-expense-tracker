@@ -14,9 +14,13 @@ class App:
                 account = self.log_income()   
             elif action == 3:
                 source, destination, amount = self.transfer()
+            elif action == 4:
+                self.ui.display_accounts(self.accounts)
             else:
                 raise ValueError
-            if action != 3:
+            if action == 4:
+                continue
+            elif action != 3:
                 print(f"Your updated balance for account \"{account["name"]}\" is {account["balance"]}")
             else:
                 print(f"Successfully transferred {amount} from {source["name"]} to {destination["name"]}.")

@@ -7,6 +7,7 @@ class UI:
         print("1 Log expense")
         print("2 Log income")
         print("3 Transfer")
+        print("4 Display accounts")
         print("0 Exit program")
         return int(self._get_input())
 
@@ -33,6 +34,13 @@ class UI:
 
     def get_transfer_amount(self):
         return float(input("Enter amount to transfer: "))
+
+    def display_accounts(self, accounts):
+        print("ACCOUNTS")
+        for account_id in accounts:
+            account = accounts[account_id]
+            print(f"\n{account["name"]}: {account["balance"]}")
+            print(f"{account["type"]}")
 
     def display_balance(self, balance):
         print(f"Your balance is: {balance}")
