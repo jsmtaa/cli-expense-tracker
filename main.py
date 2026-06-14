@@ -16,7 +16,7 @@ def main():
             "003": {
                 "name": "GoTyme",
                 "type": "savings",
-                "balance": 97.0
+                "balance": 167.0
             }
         }
 
